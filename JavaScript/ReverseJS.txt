@@ -1,0 +1,24 @@
+function reverseWord(word) {
+    let reversedWord = '';
+    for (let i = word.length - 1; i >= 0; i--) {
+        reversedWord += word[i];
+    }
+    return reversedWord;
+}
+
+function reverseWords(sentence) {
+    let words = sentence.split(' ');
+    console.log(typeof(words));
+    let reversedWords = [];
+    for (let i = 0; i < words.length; i++) {
+        reversedWords.push(reverseWord(words[i]));
+    }
+    let reversedSentence = reversedWords.join(' ');
+    console.log(typeof(reversedSentence));
+    return reversedSentence;
+}
+
+// Example usage
+let string = prompt("Enter a sentence: ");
+let ans = reverseWords(string);
+console.log(ans);
